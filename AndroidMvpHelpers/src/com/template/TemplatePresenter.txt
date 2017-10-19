@@ -1,0 +1,12 @@
+package $packagename.mvp;
+
+
+/**
+ * @author $author
+ * @Package $packagename
+ * @Description: $description
+ * @date $date
+ **/
+public class $namePresenter extends $nameContract.Presenter{
+
+}

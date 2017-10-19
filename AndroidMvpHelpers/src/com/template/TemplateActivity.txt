@@ -1,0 +1,59 @@
+package $packagename.activity;
+
+import android.os.Bundle;
+import $basemvppackage.mvp.BaseActivity;
+import $packagename.mvp.$nameContract;
+import $packagename.mvp.$nameModel;
+import $packagename.mvp.$namePresenter;
+import $basepackagename.R;
+
+/**
+ * @author $author
+ * @Package $packagename
+ * @Description: $description
+ * @date $date
+ **/
+public class $nameActivity extends BaseActivity<$namePresenter,$nameModel> implements $nameContract.View{
+
+
+    @Override
+     protected void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
+     }
+
+     @Override
+     protected int getLayoutId() {
+        return 0;
+     }
+
+     @Override
+     protected void initPresenter() {
+         mPresenter.setVM(this,mModel);
+     }
+
+     @Override
+     protected void initView(){
+
+     }
+
+
+     @Override
+     public void showLoading(String content) {
+     }
+
+
+     @Override
+     public void stopLoading() {
+     }
+
+
+     @Override
+     public void showErrorTip(String msg) {
+     }
+
+     @Override
+     protected void onDestroy() {
+         super.onDestroy();
+     }
+
+}

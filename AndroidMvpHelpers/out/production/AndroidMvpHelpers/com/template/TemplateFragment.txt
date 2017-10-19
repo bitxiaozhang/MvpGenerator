@@ -1,0 +1,65 @@
+package $packagename.fragments;
+
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import $basemvppackage.mvp.BaseFragment;
+import $packagename.mvp.$nameContract;
+import $packagename.mvp.$nameModel;
+import $packagename.mvp.$namePresenter;
+import $basepackagename.R;
+
+/**
+ * @author $author
+ * @Package $packagename
+ * @Description: $description
+ * @date $date
+ **/
+public class $nameFragment extends BaseFragment<$namePresenter,$nameModel> implements $nameContract.View{
+
+
+     public $nameFragment() {
+        // Required empty public constructor
+     }
+
+     @Override
+     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        return super.onCreateView(inflater, container, savedInstanceState);
+     }
+
+     @Override
+     protected int getLayoutId() {
+        return 0;
+     }
+
+     @Override
+     protected void initPresenter() {
+        mPresenter.setVM(this, mModel);
+     }
+
+     @Override
+     protected void initView() {
+
+     }
+
+     @Override
+     public void showLoading(String content) {
+     }
+
+
+     @Override
+     public void stopLoading() {
+     }
+
+
+     @Override
+     public void showErrorTip(String msg) {
+     }
+
+     @Override
+     public void onDestroy() {
+         super.onDestroy();
+     }
+
+}
